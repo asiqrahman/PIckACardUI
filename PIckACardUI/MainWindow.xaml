@@ -1,0 +1,42 @@
+﻿<Window x:Class="PIckACardUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIckACardUI"
+        mc:Ignorable="d"
+        Title="Card Picker" Height="300" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="CardNumberTextBlock" Grid.Column="1" FontSize="22" HorizontalAlignment="Left" Margin="84,88,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30">
+            <Label Content="How many cards should I pick?" FontSize="20"/>
+            <Slider x:Name="CardNumberBar" Minimum="1" Maximum="15" Foreground="Black" TickPlacement="BottomRight" IsSnapToTickEnabled="True" ValueChanged="CardNumberBar_ValueChanged"/>
+        </StackPanel>
+        
+        <Button Content="Pick some cards" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" FontSize="25" Click="Button_Click"/>
+       
+        <ListBox x:Name="ListOfCards" Grid.Column="1" Grid.RowSpan="2" FontSize="20"  HorizontalAlignment="Right" VerticalAlignment="Center" Height="246">
+            <ListBoxItem Content="6 of Clubs"/>
+            <ListBoxItem Content="10 of Hearts"/>
+            <ListBoxItem Content="7 of Spades"/>
+            <ListBoxItem Content="2 of Spades"/>
+            <ListBoxItem Content="8 of Clubs"/>
+            <ListBoxItem Content="Queen of Hearts"/>
+            <ListBoxItem Content="3 of Diamonds"/>
+            <ListBoxItem Content="Ace of Diamonds"/>
+            <ListBoxItem Content="King of Spades"/>
+            <ListBoxItem Content="9 of Clubs"/>
+            <ListBoxItem Content="4 of Hearts"/>
+        </ListBox>
+        
+
+    </Grid>
+</Window>
